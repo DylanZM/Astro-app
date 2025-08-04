@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
-const { content } = Astro.props;
+import Header from '@/components/Header.astro';
+
+const { content = { title: "Astro Blog" } } = Astro.props;
 ---
 
 <html lang="en">
@@ -9,8 +11,12 @@ const { content } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{content.title}</title>
+
 	</head>
-	<body>
-		<slot />
+	<body class="">
+		<Header />
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
