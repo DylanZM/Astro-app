@@ -14,9 +14,11 @@ import { Github } from 'lucide-react';
     <a href="/about" class="transition-colors duration-200 hover:text-[rgb(var(--hover))] font-semibold">About</a>
     <a href="/blog" class="transition-colors duration-200 hover:text-[rgb(var(--hover))] font-semibold">Blog</a>
     <div class="flex items-center gap-4 ml-6">
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-current hover:text-[rgb(var(--hover))] transition-transform duration-200 hover:scale-110">
-        <Github size={18} />
-      </a>
+<a href="https://github.com" target="_blank" rel="noopener noreferrer" class="transition-transform duration-300 hover:rotate-6">
+  <Github size={28} />
+  <span class="sr-only">GitHub</span>
+</a>
+
       <ModeToggle client:load />
     </div>
   </div>

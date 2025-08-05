@@ -52,12 +52,12 @@ export function ModeToggle() {
       variant="ghost" 
       size="icon" 
       onClick={toggleTheme}
-      className="transition-all duration-300 hover:scale-105 border-none shadow-none hover:shadow-none focus:shadow-none active:shadow-none bg-transparent hover:bg-transparent"
+      className="transition-transform duration-300 hover:rotate-6"
     >
       {isDark ? (
-        <Moon className="h-5 w-5 transition-all duration-300 text-slate-200" />
+        <Moon className="h-6 w-6 transition-all duration-300" />
       ) : (
-        <Sun className="h-5 w-5 transition-all duration-300 text-yellow-500" />
+        <Sun className="h-6 w-6 transition-all duration-300" />
       )}
       <span className="sr-only">
         {isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
