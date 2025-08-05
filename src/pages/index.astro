@@ -1,8 +1,10 @@
 ---
 import '../styles/global.css'
 import Layout from '@/layouts/Layout.astro'
+import Hero from '@/components/Hero.astro'
 ---
-<script is:inline>
+
+<!-- <script is:inline>
 	const getThemePreference = () => {
 		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
 			return localStorage.getItem('theme');
@@ -19,32 +21,12 @@ import Layout from '@/layouts/Layout.astro'
 		});
 		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 	}
-</script>
+</script> -->
 
 
 
 
 <Layout content={{ title: "Astro Blog" }}>
-<section class="flex flex-col md:flex-row items-center justify-between p-8">
-  <div class="md:w-1/2 space-y-4 text-center md:text-left">
-  <h1 class="text-6xl font-bold">
-  <span class="custom-gradient text-transparent bg-clip-text">
-    Welcome to My Astro Blog
-  </span><br />
-</h1>
-<p class="text-sm md:text-base font-medium text-transparent bg-clip-text custom-gradient mt-10 typewriter">
-  This is my first project with <a href="https://astro.build" >Astro</a>. Explore the site to learn more!
-</p>
-   
-  </div>
-
-  <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-    <img src="/public/img/astronaut-hero-img.webp" alt="Astronauta" class="max-w-xs md:max-w-md" />
-  </div>
-</section>
-
-
-
-
+<Hero/>
 </Layout>
 

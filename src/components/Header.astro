@@ -1,20 +1,22 @@
 ---
 import { ModeToggle } from '@/components/ui/ModeToggle';
 import { Github } from 'lucide-react';
+import { Image } from "astro:assets";
+
 ---
 
 
 
 <nav class="flex flex-1 items-center justify-between py-3 px-4 text-[1rem]">
   <a href="/" class="flex items-center gap-4">
-    <img src="/public/img/logo.png" alt="Logo" class="h-20 w-auto" />
+    <img src="/img/logo.png" alt="Logo" class="h-20 w-auto" />
   </a>
   <div class="flex items-center gap-8">
     <a href="/" class="transition-colors duration-200 hover:text-[rgb(var(--hover))] font-semibold">Home</a>
     <a href="/about" class="transition-colors duration-200 hover:text-[rgb(var(--hover))] font-semibold">About</a>
     <a href="/blog" class="transition-colors duration-200 hover:text-[rgb(var(--hover))] font-semibold">Blog</a>
     <div class="flex items-center gap-4 ml-6">
-<a href="https://github.com" target="_blank" rel="noopener noreferrer" class="transition-transform duration-300 hover:rotate-6">
+<a href="https://github.com/DylanZM/Astro-app" target="_blank" rel="noopener noreferrer" class="transition-transform duration-300 hover:rotate-6">
   <Github size={28} />
   <span class="sr-only">GitHub</span>
 </a>
