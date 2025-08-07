@@ -7,7 +7,8 @@ avatar: "https://randomuser.me/api/portraits/men/1.jpg"
 tags: ["intro", "astro"]
 ---
 
-Hello world!  
+## Hello world!  
+
 This is the first post on my Astro-powered blog.  
 Here I will share news, tutorials, and useful resources for developers.
 
@@ -26,4 +27,3 @@ It supports multiple frameworks and is easy to use.
 
 I’ll be posting regularly, so don’t forget to bookmark this blog!
 
-Thanks for visiting!

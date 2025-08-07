@@ -1,22 +1,35 @@
 ---
-
+import GradientText from "./animations/GradientText/GradientText";
 ---
 
+<section class="flex flex-col md:flex-row items-center justify-between p-4 sm:p-6 lg:p-8 min-h-screen">
+  <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+      <GradientText
+        client:load
+        colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+        animationSpeed={3}
+        showBorder={false}
+        className="leading-tight"
+      >
+        Welcome to My Astro Blog!
+      </GradientText>
+    </h1>
 
-<section class="flex flex-col md:flex-row items-center justify-between p-8">
-  <div class="md:w-1/2 space-y-4 text-center md:text-left">
-  <h1 class="text-6xl font-bold">
-  <span class="custom-gradient text-transparent bg-clip-text ">
-    Welcome to My Astro Blog
-  </span><br />
-</h1>
-<p class="text-sm md:text-base font-medium text-transparent bg-clip-text custom-gradient mt-10 typewriter">
-  This is my first project with <a href="https://astro.build" >Astro</a>. Explore the site to learn more!
-</p>
-   
+    <div class="text-sm sm:text-base md:text-lg max-w-full">
+      <GradientText
+        client:load
+        colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+        animationSpeed={3}
+        showBorder={false}
+        className="font-medium inline-block w-full"
+      >
+        <span class="typewriter-text">
+          This is my first project with <a href="https://astro.build" class="underline hover:no-underline">Astro</a>. Explore the site to learn more!
+        </span>
+      </GradientText>
+    </div>
   </div>
 
-  <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-    <img src="../img/astronaut-hero-img.webp" alt="Astronauta" class="max-w-xs md:max-w-md" />
-  </div>
+ 
 </section>

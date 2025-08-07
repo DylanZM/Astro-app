@@ -27,4 +27,3 @@ You can use Markdown for blog posts and easily add new pages.
 ## Conclusion
 
 Astro makes web development simple and fun.  
-Start your journey today!

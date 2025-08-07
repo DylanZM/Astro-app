@@ -26,4 +26,3 @@ Astro is perfect for blogs, documentation sites, portfolios, and landing pages.
 - [Astro Documentation](https://docs.astro.build/)
 - [Astro GitHub](https://github.com/withastro/astro)
 
-Have you tried it yet?
