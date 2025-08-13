@@ -7,7 +7,7 @@ avatar: "https://randomuser.me/api/portraits/men/3.jpg"
 tags: ["tutorial", "astro", "getting started"]
 ---
 
-To get started with Astro:
+## To get started with Astro:
 
 1. Install Node.js and npm.
 2. Run `npm create astro@latest`.

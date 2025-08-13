@@ -9,6 +9,7 @@ tags: ["intro", "astro"]
 
 ## Hello world!  
 
+
 This is the first post on my Astro-powered blog.  
 Here I will share news, tutorials, and useful resources for developers.
 
@@ -19,6 +20,7 @@ Here I will share news, tutorials, and useful resources for developers.
 - Resources, tips, and tricks
 
 ## Why Astro?
+
 
 Astro is a modern static site generator that helps you build fast websites.  
 It supports multiple frameworks and is easy to use.

@@ -3,12 +3,12 @@ import '../styles/global.css';
 import Header from '@/components/Header.astro';
 
 const { content = { title: "Astro Blog" } } = Astro.props;
+
 ---
 
 <html lang="en">
     <head>
         <script is:inline>
-            // Función para obtener la preferencia del tema
             function getThemePreference() {
                 if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
                     return localStorage.getItem('theme');
@@ -16,7 +16,6 @@ const { content = { title: "Astro Blog" } } = Astro.props;
                 return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
             }
             
-            // Aplicar tema inmediatamente para evitar flash
             const theme = getThemePreference();
             const isDark = theme === 'dark';
             
@@ -26,12 +25,10 @@ const { content = { title: "Astro Blog" } } = Astro.props;
                 document.documentElement.classList.remove('dark');
             }
             
-            // Guardar en localStorage si no existe
             if (typeof localStorage !== 'undefined' && !localStorage.getItem('theme')) {
                 localStorage.setItem('theme', theme);
             }
             
-            // Observer para sincronizar cambios
             if (typeof localStorage !== 'undefined') {
                 const observer = new MutationObserver(() => {
                     const currentIsDark = document.documentElement.classList.contains('dark');
@@ -48,8 +45,16 @@ const { content = { title: "Astro Blog" } } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <title>{content.title}</title>
+
+
+
+    </div>
     </head>
     <body>
+   
+
+
+
         <Header />
         <main>
             <slot />

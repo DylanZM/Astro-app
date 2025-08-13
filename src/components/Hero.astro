@@ -2,34 +2,50 @@
 import GradientText from "./animations/GradientText/GradientText";
 ---
 
-<section class="flex flex-col md:flex-row items-center justify-between p-4 sm:p-6 lg:p-8 min-h-screen">
-  <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
-    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+<section class="flex flex-col md:flex-row items-center justify-center md:justify-between p-4 sm:p-6 lg:p-8 min-h-screen gap-4 md:gap-8">
+  <div class="w-full md:w-1/2 space-y-4 md:space-y-6 text-center md:text-left">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
       <GradientText
         client:load
         colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
         animationSpeed={3}
-        showBorder={false}
         className="leading-tight"
       >
         Welcome to My Astro Blog!
       </GradientText>
     </h1>
 
-    <div class="text-sm sm:text-base md:text-lg max-w-full">
+    <div class="text-xs sm:text-sm md:text-base lg:text-lg max-w-full">
       <GradientText
         client:load
         colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
         animationSpeed={3}
-        showBorder={false}
         className="font-medium inline-block w-full"
       >
-        <span class="typewriter-text">
+        <span class="typewriter-text-responsive">
           This is my first project with <a href="https://astro.build" class="underline hover:no-underline">Astro</a>. Explore the site to learn more!
         </span>
       </GradientText>
     </div>
   </div>
 
- 
+  <div class="w-full md:w-1/2 flex justify-center items-center">
+    <div class="relative w-48 sm:w-56 md:w-64 lg:w-80 xl:w-96">
+      <!-- Imagen principal -->
+      <img 
+        src="../img/astronaut-hero-img.webp" 
+        alt="" 
+        class="w-full h-auto object-contain transition-all duration-700 hover:scale-105 hover:rotate-2 drop-shadow-2xl" 
+        loading="lazy"
+        width="448"
+        height="448"
+      />
+      
+      <div class="absolute -top-2 -right-2 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 opacity-20 blur-xl animate-pulse"></div>
+      <div class="absolute -bottom-3 -left-3 w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 opacity-25 blur-lg animate-bounce"></div>
+      <div class="absolute top-1/2 -right-1 w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 opacity-30 blur-md animate-ping"></div>
+      
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-400/10 via-purple-500/10 to-cyan-400/10 rounded-full blur-3xl -z-10 scale-110"></div>
+    </div>
+  </div>
 </section>
