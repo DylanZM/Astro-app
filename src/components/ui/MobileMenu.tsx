@@ -16,22 +16,19 @@ export function MobileMenu() {
 
   return (
     <div className="md:hidden">
-      {/* Botón hamburguesa */}
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={toggleMenu}
-        className="relative z-50"
-      >
-        {isOpen ? (
-          <X className="h-6 w-6" />
-        ) : (
+      {!isOpen && (
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={toggleMenu}
+          className="relative z-50"
+        >
           <Menu className="h-6 w-6" />
-        )}
-        <span className="sr-only">Toggle menu</span>
-      </Button>
+          <span className="sr-only">Abrir menú</span>
+        </Button>
+      )}
 
-      {/* Overlay */}
+   
       {isOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
@@ -39,14 +36,24 @@ export function MobileMenu() {
         />
       )}
 
-      {/* Menú móvil */}
+    
       <div
         className={`fixed top-0 right-0 z-50 h-full w-64 bg-background border-l border-border transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col h-full p-6 pt-20">
-          {/* Enlaces de navegación */}
+        <div className="flex justify-end p-4">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={closeMenu}
+            className="z-50"
+          >
+            <X className="h-6 w-6" />
+            <span className="sr-only">Cerrar menú</span>
+          </Button>
+        </div>
+        <div className="flex flex-col h-full p-6 pt-4">
           <nav className="flex flex-col space-y-6">
             <a
               href="/"
@@ -71,10 +78,8 @@ export function MobileMenu() {
             </a>
           </nav>
 
-          {/* Divisor */}
           <div className="border-t border-border my-6" />
 
-          {/* Acciones */}
           <div className="flex flex-col space-y-4">
             <a
               href="https://github.com/DylanZM/Astro-app"
