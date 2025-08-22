@@ -1,5 +1,6 @@
 ---
 import GradientText from "./animations/GradientText/GradientText";
+import TextType from "./animations/cards/TextAnimations/TextType/TextType.jsx";
 ---
 
 <section class="flex flex-col md:flex-row items-center justify-center md:justify-between p-4 sm:p-6 lg:p-8 min-h-screen gap-4 md:gap-8">
@@ -16,22 +17,28 @@ import GradientText from "./animations/GradientText/GradientText";
     </h1>
 
     <div class="text-xs sm:text-sm md:text-base lg:text-lg max-w-full">
-      <GradientText
-        client:load
-        colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-        animationSpeed={3}
-        className="font-medium inline-block w-full"
-      >
-        <span class="typewriter-text-responsive">
-          This is my first project with <a href="https://astro.build" class="underline hover:no-underline">Astro</a>. Explore the site to learn more!
-        </span>
-      </GradientText>
+<GradientText
+  client:load
+  colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+  animationSpeed={3}
+  className="font-medium inline-block w-full"
+>
+  <TextType
+    client:load
+    text="This is my first project with Astro. Explore the site to learn more!"
+    typingSpeed={50}
+    as="span"
+    showCursor={false}
+  />
+</GradientText>
+
     </div>
   </div>
 
   <div class="w-full md:w-1/2 flex justify-center items-center">
     <div class="relative w-48 sm:w-56 md:w-64 lg:w-80 xl:w-96">
-      <!-- Imagen principal -->
+
+
       <img 
         src="../img/astronaut-hero-img.webp" 
         alt="" 
@@ -47,5 +54,6 @@ import GradientText from "./animations/GradientText/GradientText";
       
       <div class="absolute inset-0 bg-gradient-to-r from-blue-400/10 via-purple-500/10 to-cyan-400/10 rounded-full blur-3xl -z-10 scale-110"></div>
     </div>
+    
   </div>
 </section>

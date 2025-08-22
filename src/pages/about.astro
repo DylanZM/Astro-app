@@ -1,57 +1,60 @@
 ---
 import Layout from "@/layouts/Layout.astro"
 import GradientText from "@/components/animations/GradientText/GradientText"
+import { Code2, MessageCircle, HeartHandshake } from '@lucide/astro';
 ---
 
 <Layout>
-  <section class="max-w-3xl mx-auto mt-20 px-4 flex flex-col items-center">
-
-    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
-      <GradientText
-        client:load
-        colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-        animationSpeed={3}
-        className="leading-tight"
-      >
-        About Us
-      </GradientText>
-    </h1>
-
-    <div class="rounded-lg shadow p-6 w-full mb-8 ">
-      <p class="text-xl font-medium text-center">
-        Welcome to our blog! This site is built with <b>Astro</b>, <b>React</b>, and <b>Tailwind CSS</b> to deliver a fast, modern, and responsive experience.<br /><br />
-        Our mission is to share knowledge, insights, and resources about web development, programming, and the latest technology trends.<br /><br />
-        Here you'll find articles, tutorials, and project showcases designed to inspire and support developers at every level. Whether you're just starting out or looking to deepen your expertise, we aim to help you grow and stay up-to-date in the ever-evolving tech world.
-      </p>
-    </div>
-
-    <div class="w-full flex flex-col md:flex-row gap-8 mb-8">
-      <div class="flex-1 rounded-lg p-6 shadow ">
-        <h2 class="text-2xl font-semibold mb-2">Technologies We Use</h2>
-        <ul class="list-disc list-inside text-left text-lg space-y-1">
-          <li><b>Astro</b> – for ultra-fast static site generation</li>
-          <li><b>React</b> – for interactive and dynamic components</li>
-          <li><b>Tailwind CSS</b> – for modern and flexible styling</li>
-        </ul>
+  <div class="min-h-screen flex flex-col justify-center items-center">
+    <div class="container mx-auto px-4 py-12">
+      <div class="max-w-3xl mx-auto p-10 rounded-3xl border border-none relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 opacity-10 pointer-events-none select-none">
+          
+        </div>
+        <div class="flex flex-col items-center gap-3 mb-6">
+<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">            <GradientText
+              client:load
+              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+              animationSpeed={3}
+              className="leading-tight"
+            >
+              About Us
+            </GradientText>
+          </h1>
+        </div>
+        <div class="prose prose-invert max-w-none ">
+          <div class="space-y-8">
+            <section>
+              <div class="flex items-center gap-2 mb-2">
+                <Code2 class="w-6 h-6 text-[#172739]" />
+                <h2 class="text-2xl font-bold">What is this project?</h2>
+              </div>
+              <p>
+                This blog is a personal project created to learn, practice, and share about modern web development. It is not a commercial product, but rather a showcase of how to build fast, attractive, and functional sites using current technologies.
+              </p>
+            </section>
+            <section>
+              <div class="flex items-center gap-2 mb-2">
+                <MessageCircle class="w-6 h-6 text-[#172739]" />
+                <h2 class="text-2xl font-bold">Features</h2>
+              </div>
+              <ul class="list-disc pl-6">
+                <li>Articles and tutorials on modern web technologies</li>
+                <li>Modern and responsive UI</li>
+                <li>Resources and best practices for developers</li>
+                <li>Examples of inspiring projects</li>
+                <li>Open community to learn and collaborate</li>
+              </ul>
+            </section>
+            <section>
+              <div class="flex items-center gap-2 mb-2">
+                <HeartHandshake class="w-6 h-6 text-[#172739]" />
+                <h2 class="text-2xl font-bold">Who are we?</h2>
+              </div>
+              <p>
+                This site was designed and developed by a team passionate about technology and continuous learning. Your suggestions and feedback are always welcome!
+              </p>
+            </section>
+          </div>
+        </div>
       </div>
-      <div class="flex-1 rounded-lg p-6 shadow ">
-        <h2 class="text-2xl font-semibold mb-2">Our Mission</h2>
-        <p>
-          To empower developers by providing high-quality content, practical guides, and a supportive community where everyone can learn and share experiences.
-        </p>
-      </div>
-    </div>
-
-    <div class="w-full rounded-lg p-6 shadow ">
-      <h2 class="text-2xl font-semibold mb-2">What You'll Find Here</h2>
-      <ul class="list-disc list-inside text-left text-lg space-y-1">
-        <li>In-depth tutorials and guides on modern web technologies</li>
-        <li>The latest news and trends in programming</li>
-        <li>Showcases of inspiring projects</li>
-        <li>Tips and best practices for developers</li>
-        <li>A welcoming community for learning and collaboration</li>
-      </ul>
-    </div>
-
-  </section>
-</Layout>

@@ -7,6 +7,8 @@ avatar: "https://randomuser.me/api/portraits/men/2.jpg"
 tags: ["astro", "framework", "javascript"]
 ---
 
+## Astro
+
 Astro is a modern framework for building fast and efficient websites.  
 It lets you use components from different frameworks and optimizes resource loading.
 
