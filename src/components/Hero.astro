@@ -1,51 +1,32 @@
 ---
 import GradientText from "./animations/GradientText/GradientText";
-import TextType from "./animations/cards/TextAnimations/TextType/TextType.jsx";
+import ElectricCard from "./ElectricCard.astro";
 ---
 
 <section class="flex flex-col md:flex-row items-center justify-center md:justify-between p-4 sm:p-6 lg:p-8 min-h-screen gap-4 md:gap-8">
   <div class="w-full md:w-1/2 space-y-4 md:space-y-6 text-center md:text-left">
-    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
+    <span class="text-6xl lg:text-8xl md:text-left font-bold text-center ">
       <GradientText
         client:load
         colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
         animationSpeed={3}
         className="leading-tight"
       >
-        Welcome to My Astro Blog!
+        Welcome
       </GradientText>
-    </h1>
-
-    <div class="text-xs sm:text-sm md:text-base lg:text-lg max-w-full">
-<GradientText
-  client:load
-  colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-  animationSpeed={3}
-  className="font-medium inline-block w-full"
->
-  <TextType
-    client:load
-    text="This is my first project with Astro. Explore the site to learn more!"
-    typingSpeed={50}
-    as="span"
-    showCursor={false}
-  />
-</GradientText>
-
-    </div>
+      to My Astro Blog
+    </span>
   </div>
 
   <div class="w-full md:w-1/2 flex justify-center items-center">
-    <div class="relative w-48 sm:w-56 md:w-64 lg:w-80 xl:w-96">
-
-
+    <div class="relative w-64 sm:w-80 md:w-96 lg:w-[30rem] xl:w-[36rem]">
       <img 
         src="../img/astronaut-hero-img.webp" 
         alt="" 
         class="w-full h-auto object-contain transition-all duration-700 hover:scale-105 hover:rotate-2 drop-shadow-2xl" 
         loading="lazy"
-        width="448"
-        height="448"
+        width="576"
+        height="576"
       />
       
       <div class="absolute -top-2 -right-2 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 opacity-20 blur-xl animate-pulse"></div>
@@ -54,6 +35,54 @@ import TextType from "./animations/cards/TextAnimations/TextType/TextType.jsx";
       
       <div class="absolute inset-0 bg-gradient-to-r from-blue-400/10 via-purple-500/10 to-cyan-400/10 rounded-full blur-3xl -z-10 scale-110"></div>
     </div>
-    
+  </div>
+</section>
+
+<section class="w-full pt-72 pb-40 "> 
+  <div class="max-w-5xl ml-10 px-0 "> 
+    <h2 class="text-6xl mb-16 font-bold">
+      Features
+    </h2>  
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-40">
+      <ElectricCard
+        title="Astro"
+        description="We use Astro to build this website because it allows us to create fast, optimized, and modern web pages with minimal JavaScript and a great developer experience."
+        image="../img/astro.png"
+        tags={["Live", "v5.0"]}
+        buttonText="Get Started"
+      />
+      <ElectricCard
+        title="Tailwing"
+description="We use Tailwind to style this website because it lets us build beautiful, responsive, and modern interfaces quickly with utility-first CSS classes and great flexibility."        image="../img/tailwing.png"
+        tags={["Live", "v4.0"]}
+        buttonText="Get Started"
+      />
+      <ElectricCard
+        title="Dark mode"
+        description="We use Dark Mode to enhance the user experience by allowing visitors to choose a comfortable viewing mode, making the website modern, accessible, and visually appealing."        image="../img/DarkMode.png"
+        tags={["Live", "v5.13"]}
+        buttonText="Get Started"
+      />
+      <ElectricCard
+        title="Markdown"
+        description="We use Markdown to write content for this website because it provides a simple, readable, and flexible way to create and manage pages, making editing fast and efficient."        image="../img/Markdown.png"
+        tags={["Live", "v5.0"]}
+        buttonText="Get Started"
+      />
+      <ElectricCard
+        title="React"
+        description="We use React to create interactive and dynamic components, allowing us to build a modern, scalable, and maintainable user interface for this website."
+        image="../img/React.png"
+        tags={["Live", "v5.0"]}
+        buttonText="Get Started"
+      />
+      <ElectricCard
+        title="TypeScript"
+        description="We use TypeScript to add static typing to our codebase, improving code quality, maintainability, and developer productivity throughout the project."
+        image="../img/Typescript.png"
+        tags={["Live", "v5.0"]}
+        buttonText="Get Started"
+      />
+    </div>
   </div>
 </section>

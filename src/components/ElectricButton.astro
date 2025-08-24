@@ -1,0 +1,31 @@
+---
+import ElectricBorder from "./animations/cards/Animations/ElectricBorder/ElectricBorder";
+
+const {
+  children = "Get Started",
+  color = "#7df9ff",
+  speed = 2,
+  chaos = 0.5,
+  thickness = 2,
+  onClick = undefined,
+  className = "",
+  style = {},
+  type = "button",
+} = Astro.props;
+---
+
+<ElectricBorder
+client:load
+  color={color}
+  speed={speed}
+  chaos={chaos}
+  thickness={thickness}
+  style={{ borderRadius: 12, display: "inline-block", ...style }}
+>
+  <button
+    type={type}
+    class={`px-6 py-2 bg-transparent font-semibold text-cyan-300 rounded-xl focus:outline-none ${className}`}
+    onClick={onClick}
+  >
+    {children}
+  </button>
