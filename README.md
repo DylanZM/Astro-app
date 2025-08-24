@@ -1,13 +1,43 @@
-# Astro with Tailwind
+# Astro Blog App with Tailwind
+
+A modern, fast, and beautiful blog built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com).
+
+## 🚀 Live Demo
+
+[View Live Demo](https://astro-app-dylanzm.vercel.app/) <!-- Cambia esta URL por la de tu despliegue en Vercel -->
+
+## Features
+
+- ⚡️ Built with Astro for optimal performance
+- 🎨 Styled with Tailwind CSS
+- 📝 Markdown-powered blog posts
+- 💡 Custom animated components
+- 📱 Responsive & accessible design
+- ☁️ Easy deployment to Vercel
+
+## Getting Started
+
+Create a new Astro project with Tailwind CSS:
 
 ```sh
 pnpm create astro@latest -- --template with-tailwindcss
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-tailwindcss/devcontainer.json)
+Or clone this repository and install dependencies:
 
-Astro comes with [Tailwind](https://tailwindcss.com) support out of the box. This example showcases how to style your Astro project with Tailwind.
+```sh
+git clone https://github.com/DylanZM/Astro-app.git
+cd Astro-app
+pnpm install
+pnpm run dev
+```
 
-For complete setup instructions, please see our [Tailwind Integration Guide](https://docs.astro.build/en/guides/integrations-guide/tailwind).
+
+## Author
+
+**Dylan Zarzuela**  
+[GitHub](https://github.com/DylanZM)
+
+---
+
+For complete setup instructions, see the [Astro Tailwind Integration Guide](https://docs.astro.build/en/guides/integrations-guide/tailwind)
