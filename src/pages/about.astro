@@ -6,12 +6,11 @@ import GradientText from "@/components/animations/GradientText/GradientText"
 <Layout>
   <div class="min-h-screen flex flex-col justify-center items-center">
     <div class="container mx-auto px-4 py-12">
-      <div class="max-w-3xl mx-auto p-10 rounded-3xl border border-none relative overflow-hidden">
-        <div class="absolute -top-10 -right-10 opacity-10 pointer-events-none select-none">
-          
-        </div>
+       <div class="max-w-3xl mx-auto p-10 rounded-3xl relative overflow-hidden backdrop-blur-md">
+        <!-- Eliminado el SVG decorativo -->
         <div class="flex flex-col items-center gap-3 mb-6">
-<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">            <GradientText
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+            <GradientText
               client:load
               colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
               animationSpeed={3}
@@ -20,6 +19,29 @@ import GradientText from "@/components/animations/GradientText/GradientText"
               About
             </GradientText>
           </h1>
+          
         </div>
-       
+        <p class="text-lg text-center mb-8 font-medium">
+          Welcome to <span class="font-semibold">Astro Blog App</span>!  
+          This project is built with <span class="font-semibold">Astro</span> and <span class="font-semibold">Tailwind CSS</span> to provide a fast, modern, and beautiful blogging experience.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div class="rounded-xl p-6 flex-1">
+            <h2 class="text-xl font-bold mb-2">🚀 Features</h2>
+            <ul class="list-disc list-inside text-base text-muted-foreground space-y-1">
+              <li>Modern Astro framework</li>
+              <li>Responsive & accessible design</li>
+              <li>Markdown-powered blog posts</li>
+              <li>Custom animated components</li>
+              <li>Easy deployment to Vercel</li>
+            </ul>
+          </div>
+          <div class="rounded-xl p-6 flex-1">
+            <h2 class="text-xl font-bold mb-2">👨‍💻 About the Author</h2>
+            <p class="text-base text-muted-foreground">
+              Hi! I'm <span class="font-semibold">Dylan Zarzuela</span>, a passionate web developer who loves building beautiful and performant web apps.<br/>
+              Check out the <a href="https://github.com/DylanZM/Astro-app" target="_blank" class="underline-hover">GitHub repo</a>!
+            </p>
+          </div>
+        </div>
       </div>
