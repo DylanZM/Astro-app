@@ -20,12 +20,13 @@ client:load
   speed={speed}
   chaos={chaos}
   thickness={thickness}
+  className={className}
   style={{ borderRadius: 12, display: "inline-block", ...style }}
 >
   <button
     type={type}
     class={`px-6 py-2 bg-transparent font-semibold text-cyan-300 rounded-xl focus:outline-none ${className}`}
-    onClick={onClick}
+    onclick={onClick}
   >
     {children}
   </button>
