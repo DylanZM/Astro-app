@@ -8,6 +8,7 @@ const {
   image = "",
   badge = "",
   buttonText = "",
+  href = "",
   onClick = undefined,
 } = Astro.props;
 ---
@@ -19,7 +20,7 @@ const {
   thickness={2}
   style={{ borderRadius: 20, maxWidth: 370, margin: "0 auto" }}
 >
-  <div class="rounded-2xl p-8 pb-14 flex flex-col gap-4 items-center shadow-xl relative z-10 min-w-[320px] min-h-[540px] bg-transparent overflow-visible">
+  <div class="rounded-2xl p-8 pb-14 flex flex-col gap-4 items-center shadow-xl relative z-10 min-w-[320px] bg-transparent overflow-visible">
     {image && (
       <img src={image} alt={title} class="w-32 h-32 object-contain mb-2" />
     )}
@@ -28,7 +29,11 @@ const {
     )}
     <h3 class="text-2xl font-bold mb-2 text-center">{title}</h3>
     <p class="text-center mb-4 text-base font-medium">{description}</p>
-    {buttonText && (
+    {buttonText && href ? (
+      <a href={href} target="_blank" rel="noopener noreferrer" class="mt-2" style="text-decoration: none;">
+        <ElectricButton>{buttonText}</ElectricButton>
+      </a>
+    ) : buttonText && (
       <ElectricButton onClick={onClick} className="mt-2">
         {buttonText}
       </ElectricButton>

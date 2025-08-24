@@ -1,6 +1,7 @@
 ---
 import GradientText from "./animations/GradientText/GradientText";
 import ElectricCard from "./ElectricCard.astro";
+import Footer from "./footer.astro";
 ---
 
 <section class="flex flex-col md:flex-row items-center justify-center md:justify-between p-4 sm:p-6 lg:p-8 min-h-screen gap-4 md:gap-8">
@@ -48,41 +49,46 @@ import ElectricCard from "./ElectricCard.astro";
         title="Astro"
         description="We use Astro to build this website because it allows us to create fast, optimized, and modern web pages with minimal JavaScript and a great developer experience."
         image="../img/astro.png"
-        tags={["Live", "v5.0"]}
         buttonText="Get Started"
+        href="https://astro.build"
       />
       <ElectricCard
-        title="Tailwing"
-description="We use Tailwind to style this website because it lets us build beautiful, responsive, and modern interfaces quickly with utility-first CSS classes and great flexibility."        image="../img/tailwing.png"
-        tags={["Live", "v4.0"]}
+        title="Tailwind"
+        description="We use Tailwind to style this website because it lets us build beautiful, responsive, and modern interfaces quickly with utility-first CSS classes and great flexibility."
+        image="../img/tailwing.png"
         buttonText="Get Started"
+        href="https://tailwindcss.com"
       />
       <ElectricCard
         title="Dark mode"
-        description="We use Dark Mode to enhance the user experience by allowing visitors to choose a comfortable viewing mode, making the website modern, accessible, and visually appealing."        image="../img/DarkMode.png"
-        tags={["Live", "v5.13"]}
+        description="We use Dark Mode to enhance the user experience by allowing visitors to choose a comfortable viewing mode, making the website modern, accessible, and visually appealing."
+        image="../img/DarkMode.png"
         buttonText="Get Started"
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
       />
       <ElectricCard
         title="Markdown"
-        description="We use Markdown to write content for this website because it provides a simple, readable, and flexible way to create and manage pages, making editing fast and efficient."        image="../img/Markdown.png"
-        tags={["Live", "v5.0"]}
+        description="We use Markdown to write content for this website because it provides a simple, readable, and flexible way to create and manage pages, making editing fast and efficient."
+        image="../img/Markdown.png"
         buttonText="Get Started"
+        href="https://www.markdownguide.org/"
       />
       <ElectricCard
         title="React"
         description="We use React to create interactive and dynamic components, allowing us to build a modern, scalable, and maintainable user interface for this website."
         image="../img/React.png"
-        tags={["Live", "v5.0"]}
         buttonText="Get Started"
+        href="https://react.dev/"
       />
       <ElectricCard
         title="TypeScript"
         description="We use TypeScript to add static typing to our codebase, improving code quality, maintainability, and developer productivity throughout the project."
         image="../img/Typescript.png"
-       
         buttonText="Get Started"
+        href="https://www.typescriptlang.org/"
       />
     </div>
   </div>
 </section>
+
+<Footer/>
