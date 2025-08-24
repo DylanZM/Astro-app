@@ -2,7 +2,6 @@
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
 
-![Astro Blog App Banner](https://raw.githubusercontent.com/DylanZM/Astro-app/main/public/astro-blog-banner.png) <!-- Cambia la URL por tu banner si tienes uno -->
 
 A modern, accessible, and fast blog application built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com). This project is focused on performance, accessibility, and developer experience. Easily create and share your posts using Markdown, enjoy custom animated components, and deploy in seconds.
 
