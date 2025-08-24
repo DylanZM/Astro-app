@@ -7,7 +7,6 @@ const {
   description = "",
   image = "",
   badge = "",
-  tags = ["JavaScript", "Static Site", "SSR"],
   buttonText = "",
   onClick = undefined,
 } = Astro.props;
@@ -29,11 +28,6 @@ const {
     )}
     <h3 class="text-2xl font-bold mb-2 text-center">{title}</h3>
     <p class="text-center mb-4 text-base font-medium">{description}</p>
-    <div class="flex flex-wrap gap-2 mb-2 justify-center">
-      {tags.map(tag => (
-        <span class="bg-[#222c3c] text-xs px-3 py-1 rounded-full text-cyan-300">{tag}</span>
-      ))}
-    </div>
     {buttonText && (
       <ElectricButton onClick={onClick} className="mt-2">
         {buttonText}
